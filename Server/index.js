@@ -8,7 +8,7 @@ const app = express();
 const port = 5505;
 
 // Middleware
-app.use(cors({ origin: ['http://localhost:3000', ' https://vishveshwaran-quizapp.vercel.app/index.html'], // Add your frontend URLs here
+app.use(cors({ origin: ['http://localhost:3000', ' https://vishveshwaran-quizapp.vercel.app/index.html'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true}));
 app.use(bodyParser.json());
