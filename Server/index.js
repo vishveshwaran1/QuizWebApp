@@ -8,7 +8,9 @@ const app = express();
 const port = 5505;
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: ['http://localhost:3000', ' https://vishveshwaran-quizapp.vercel.app/index.html'], // Add your frontend URLs here
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true}));
 app.use(bodyParser.json());
 
 const uri = 'mongodb+srv://Vichu:Vichu@quizwebapp.re8ld.mongodb.net/?retryWrites=true&w=majority&appName=QuizWebApp';
